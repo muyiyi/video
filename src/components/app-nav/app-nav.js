@@ -5,12 +5,11 @@
  */
 
 import React from 'react'
-import './nav.less'
+import './app-nav.less'
 import classnames from 'classnames'
 
 
-
-class Nav extends React.Component {
+class AppNav extends React.Component {
   /**
    * @desc 不用解释了吧，这是组件的构造函数
    * @param {*} props 
@@ -29,7 +28,6 @@ class Nav extends React.Component {
     })
   }
 
-
   /**
    * @desc 不用解释了吧，render函数
    */
@@ -45,7 +43,7 @@ class Nav extends React.Component {
     })
 
     return (
-      <ul className="nav">
+      <ul className="app-nav">
           { menulie }
       </ul>
     )
@@ -53,5 +51,4 @@ class Nav extends React.Component {
 }
 
 
-
-export default Nav;
+export default AppNav;

@@ -51,5 +51,4 @@ class VideoStyle extends React.Component {
 }
 
 
-
 export default VideoStyle;

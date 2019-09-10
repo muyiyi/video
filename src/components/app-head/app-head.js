@@ -5,13 +5,10 @@
  */
 
 import React from 'react'
-import './app.less'
-import AppNav from '../app-nav/app-nav'
-import AppHead from '../app-head/app-head';
-import AppVideo from '../app-video/app-video';
+import './app-head.less'
 
 
-class App extends React.Component {
+class AppHead extends React.Component {
   /**
    * @desc 不用解释了吧，这是组件的构造函数
    * @param {*} props 
@@ -27,14 +24,16 @@ class App extends React.Component {
    */
   render() {
     return (
-    <div className="app">
-      <AppHead></AppHead>
-      <AppNav></AppNav>
-      <AppVideo></AppVideo>
-    </div>
+        <div className="app-head">
+            <div className="head-logo"></div>
+            <div className="search-contain">
+                <span className="search-text">陆战之王</span>
+                <div className="search-logo"></div>
+            </div>
+        </div>
     )
   }
 }
 
 
-export default App;
+export default AppHead;
