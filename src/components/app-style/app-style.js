@@ -6,6 +6,8 @@
 
 import React from 'react'
 import './app-style.less'
+import ListStyle from '../list-style/list-style';
+import classnames from 'classnames'
 
 
 class AppStyle extends React.Component {
@@ -23,16 +25,25 @@ class AppStyle extends React.Component {
    * @desc 不用解释了吧，render函数
    */
   render() {
-    let item = this.props.data;
-    console.log(item)    
-    if (item.type === 2) {
+    let data = this.props.data;
+    const video = data.list.map((item, index) => {
       return (
-        <div>
-          <div>{ item.title }</div>
+        <div className="transmit"  key={ index }>
+          <ListStyle item={ item }></ListStyle>
         </div>
       )
-    }
+    });
 
+    return (
+      <div className="video-contain">
+        <div className="video-name">{ data.nav }</div>
+        <div className={ classnames('box', {'boxa': data.type === 4 }, {'boxb': data.type === 2} )} >{ video }</div>
+        <div className={ classnames('list-btm', {'list-btma': data.type === 2 } )}>
+          <img className="img-10" alt="" src={ data.imgsrc }/>
+          <div className="list-change">{ data.btm }</div>
+        </div> 
+      </div>
+    )
   }
 }
 

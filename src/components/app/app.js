@@ -9,6 +9,8 @@ import './app.less'
 import AppNav from '../app-nav/app-nav'
 import AppHead from '../app-head/app-head';
 import AppVideo from '../app-video/app-video';
+import Gundong from '../gundong/gundong';
+import AppSwiper from '../app-swiper/app-swiper';
 
 
 class App extends React.Component {
@@ -30,6 +32,7 @@ class App extends React.Component {
     <div className="app">
       <AppHead></AppHead>
       <AppNav></AppNav>
+      <AppSwiper></AppSwiper>
       <AppVideo></AppVideo>
     </div>
     )
