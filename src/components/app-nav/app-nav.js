@@ -32,7 +32,7 @@ class AppNav extends React.Component {
    * @desc 不用解释了吧，render函数
    */
   render() {
-    const menu = ['精选', '电视剧', 'VIP', '电影', '综艺', '动漫', '少儿', '娱乐', '潮音', '游戏', '纪录片']
+    const menu = this.props.nav
     let menulie = menu.map((item, index) => {
       return (
         <li key={ index } onClick={ this.Tabchange.bind(this, index) }
