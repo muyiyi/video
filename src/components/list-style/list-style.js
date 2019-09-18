@@ -6,7 +6,6 @@
 
 import React from 'react'
 import './list-style.less'
-import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
 
 
@@ -26,52 +25,8 @@ class ListStyle extends React.Component {
    */
   render() {
     let item = this.props.item
-    if (item.typea === 2) {
-      return (
-        <div className="list-styleb">
-            <div className="list-box">
-                <div className="video-list">
-                  <div className="list-detail">
-                    <img className="img-2" alt="" src={ item.imgsrc }/>
-                    <div className="icon">
-                        <div className="add-icon">
-                            <div className="icon-1">{ item.icon }</div>
-                            <div className="vip">{ item.vip }</div>
-                        </div>
-                    </div>
-                    <div className="state-contain">
-                      <div className="state">{ item.state }</div> 
-                    </div>
-                  </div>
-                <div className="list-title">{ item.title }</div>
-                <div className="list-titlea">{ item.text }</div>
-            </div>
-          </div>
-        </div>
-      ) 
-    } else if (item.typea === 3) {
-      return (
-        <div className="list-style">
-          <div className="list-box">
-            <div className="video-list">
-              <div className="list-detail">
-                <img className="img-2" alt="" src={ item.imgsrc }/>
-                <div className="icon">
-                  <div className="add-icon">
-                    <div className="icon-1">{ item.icon }</div>
-                    <div className="vip">{ item.vip }</div>
-                  </div>
-                </div>
-              </div>
-              <div className="list-title">{ item.title }</div>
-              <div className="list-titlea">{ item.text }</div>
-            </div>
-          </div>
-        </div>
-      )
-    } else {
-      return (
-        <div className="list-stylea">
+    return (
+      <div className="list-style">
           <div className="list-box">
               <div className="video-list">
                 <div className="list-detail">
@@ -82,14 +37,17 @@ class ListStyle extends React.Component {
                           <div className="vip">{ item.vip }</div>
                       </div>
                   </div>
+                  <div className="state-contain">
+                    <div className="state">{ item.state }</div> 
+                  </div>
                 </div>
               <div className="list-title">{ item.title }</div>
               <div className="list-titlea">{ item.text }</div>
-            </div>
           </div>
         </div>
-      )
-    }
+      </div>
+    ) 
+
   }
 }
 

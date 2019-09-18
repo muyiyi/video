@@ -19,7 +19,6 @@ class SwiperDetail extends React.Component {
     this.state = {}
   }
 
-
   /**
    * @desc 不用解释了吧，render函数
    */

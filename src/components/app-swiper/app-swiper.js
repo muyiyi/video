@@ -36,23 +36,23 @@ class AppSwiper extends React.Component {
    * @desc 不用解释了吧，render函数
    */
   render() {
-      const swipermenu = this.props.swiper
-      let swiperye = swipermenu.map((item, index) => {
-          return (
-            <div className="swiper-slide" key={ index }>
-                <SwiperDetail data={ item }></SwiperDetail>
-            </div>
-          )
-      })
-    return (
-        <div className="app-swiper">
-            <div className="swiper-container">
-                <div className="swiper-wrapper">
-                   { swiperye }
-                </div>
-            </div>
+    let data = this.props.data;
+    const swiper = data.list.map((item, index) => {
+      return (
+        <div className="swiper-slide" key={ index }>
+          <SwiperDetail data={ item }></SwiperDetail>
         </div>
-    );
+      )
+    });
+    return (
+      <div className="app-swiper">
+      <div className="swiper-container">
+          <div className="swiper-wrapper">
+             { swiper }
+          </div>
+      </div>
+  </div>
+    )
   }
 }
 

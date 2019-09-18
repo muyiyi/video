@@ -22,10 +22,12 @@ class AppNav extends React.Component {
     }
   }
 
-  Tabchange = (index) => {
+  Tabchange = (item, index) => {
+    this.props.listchange()
     this.setState({
       chooseindex: index
     })
+    console.log(item)
   }
 
   /**
@@ -35,7 +37,7 @@ class AppNav extends React.Component {
     const menu = this.props.nav
     let menulie = menu.map((item, index) => {
       return (
-        <li key={ index } onClick={ this.Tabchange.bind(this, index) }
+        <li key={ index } onClick={ this.Tabchange.bind(this, item, index) }
         className={ classnames({'selected': this.state.chooseindex === index}) }>
         { item }
         </li>

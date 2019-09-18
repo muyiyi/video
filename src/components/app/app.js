@@ -9,7 +9,6 @@ import './app.less'
 import AppNav from '../app-nav/app-nav'
 import AppHead from '../app-head/app-head';
 import AppVideo from '../app-video/app-video';
-import AppSwiper from '../app-swiper/app-swiper';
 
 
 class App extends React.Component {
@@ -23,6 +22,54 @@ class App extends React.Component {
     this.state = {
       menu: ['精选', '电视剧', 'VIP', '电影', '综艺', '动漫', '少儿', '娱乐', '潮音', '游戏', '纪录片'],
       videomenu: [
+        {
+          nav: '',
+          type: 1,
+          btm: '',
+          imgsrc: '',
+          list: [
+            {
+              imgsrc: 'http://puui.qpic.cn/tv/0/268981778_1080607/0',
+              icon: '.',
+              vip: 'VIP',
+              state: '更新至29集',
+              title: '【陆战之王·更新】兵王铁树开花车站硬核告白',
+              num: '1/5'
+            },
+            {
+              imgsrc: 'http://puui.qpic.cn/tv/0/268834759_1080607/0',
+              icon: '.',
+              vip: 'VIP',
+              state: '更新至30集',
+              title: '【老酒馆】正主上线！陈怀海背媳妇回家',
+              num: '2/5'
+            },
+            {
+              imgsrc: 'http://puui.qpic.cn/tv/0/270520589_1080607/0',
+              icon: '.',
+              vip: 'VIP',
+              state: '更新至20集',
+              title: '【极限17·滑魂】季杨杨恋爱了？迷上滑板女孩',
+              num: '3/5'
+            },
+            {
+              imgsrc: 'http://puui.qpic.cn/tv/0/268739120_1080607/0',
+              icon: '.',
+              vip: 'VIP',
+              state: '更新至21集',
+              title: '【柴小七】外星女孩告白地球霸总：我喜欢你！',
+              num: '4/5'
+            },
+            {
+              imgsrc: 'http://puui.qpic.cn/tv/0/264282330_1080607/0',
+              icon: '.',
+              vip: 'VIP',
+              state: '更新至09集',
+              title: '【斗破苍穹3·更新】萧炎实力碾压大斗师墨冉',
+              num: '5/5'
+            },
+          ],          
+        },
         {
           nav: '猜你在追',
           type: 2,
@@ -173,7 +220,6 @@ class App extends React.Component {
               vip: 'VIP',
               state: '更新至26集',
               videosrc: '',
-              typea: 1
             },
             {
               imgsrc: 'http://puui.qpic.cn/tv/0/265991704_498280/0', 
@@ -183,7 +229,6 @@ class App extends React.Component {
               vip: 'VIP',
               state: '更新至26集',
               videosrc: '',
-              typea: 3
             },
             {
               imgsrc: 'http://puui.qpic.cn/tv/0/263654926_498280/0', 
@@ -193,7 +238,6 @@ class App extends React.Component {
               vip: 'VIP',
               state: '更新至16集',
               videosrc: '',
-              typea: 3
             },
             {
               imgsrc: 'http://puui.qpic.cn/tv/0/261721651_498280/0', 
@@ -203,7 +247,6 @@ class App extends React.Component {
               vip: 'VIP',
               state: '全40集',
               videosrc: '',
-              typea: 3
             },
             {
               imgsrc: 'http://puui.qpic.cn/tv/0/261726583_498280/0', 
@@ -213,7 +256,6 @@ class App extends React.Component {
               vip: 'VIP',
               state: '更新至24集',
               videosrc: '',
-              typea: 3
             },
             {
               imgsrc: 'http://puui.qpic.cn/tv/0/266858173_498280/0', 
@@ -223,7 +265,6 @@ class App extends React.Component {
               vip: 'VIP',
               state: '更新至20集',
               videosrc: '',
-              typea: 3
             },
             {
               imgsrc: 'http://puui.qpic.cn/tv/0/265386188_498280/0', 
@@ -233,55 +274,16 @@ class App extends React.Component {
               vip: '预告片',
               state: '更新至20集',
               videosrc: '',
-              typea: 3
             },
           ],          
         },
       ],
-      swipermenu: [
-        {
-          imgsrc: 'http://puui.qpic.cn/tv/0/268981778_1080607/0',
-          icon: '.',
-          vip: 'VIP',
-          state: '更新至29集',
-          title: '【陆战之王·更新】兵王铁树开花车站硬核告白',
-          num: '1/5'
-        },
-        {
-          imgsrc: 'http://puui.qpic.cn/tv/0/268834759_1080607/0',
-          icon: '.',
-          vip: 'VIP',
-          state: '更新至30集',
-          title: '【老酒馆】正主上线！陈怀海背媳妇回家',
-          num: '2/5'
-        },
-        {
-          imgsrc: 'http://puui.qpic.cn/tv/0/270520589_1080607/0',
-          icon: '.',
-          vip: 'VIP',
-          state: '更新至20集',
-          title: '【极限17·滑魂】季杨杨恋爱了？迷上滑板女孩',
-          num: '3/5'
-        },
-        {
-          imgsrc: 'http://puui.qpic.cn/tv/0/268739120_1080607/0',
-          icon: '.',
-          vip: 'VIP',
-          state: '更新至21集',
-          title: '【柴小七】外星女孩告白地球霸总：我喜欢你！',
-          num: '4/5'
-        },
-        {
-          imgsrc: 'http://puui.qpic.cn/tv/0/264282330_1080607/0',
-          icon: '.',
-          vip: 'VIP',
-          state: '更新至09集',
-          title: '【斗破苍穹3·更新】萧炎实力碾压大斗师墨冉',
-          num: '5/5'
-        },
-      ]
     }
   }
+
+  change = () => {
+    this.setState()
+  } 
 
   /**
    * @desc 不用解释了吧，render函数
@@ -290,8 +292,7 @@ class App extends React.Component {
     return (
     <div className="app">
       <AppHead></AppHead>
-      <AppNav nav={ this.state.menu }></AppNav>
-      <AppSwiper swiper={ this.state.swipermenu }></AppSwiper>
+      <AppNav nav={ this.state.menu } listchange={ this.change }></AppNav>
       <AppVideo video={ this.state.videomenu }></AppVideo>
     </div>
     )
