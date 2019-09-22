@@ -28,7 +28,7 @@ class Demo extends React.Component {
   }
 
   componentDidMount() {
-    // HttpClient.getList({}, (rsp) => { console.log(rsp); });
+     //HttpClient.getList({}, (rsp) => { console.log(rsp); });
   }
 
   dispatchReduxAction = () => {

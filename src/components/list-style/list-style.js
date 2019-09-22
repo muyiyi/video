@@ -27,24 +27,25 @@ class ListStyle extends React.Component {
     let item = this.props.item
     return (
       <div className="list-style">
+        <a href={ item.url }>
           <div className="list-box">
-              <div className="video-list">
-                <div className="list-detail">
-                  <img className="img-2" alt="" src={ item.imgsrc }/>
-                  <div className="icon">
-                      <div className="add-icon">
-                          <div className="icon-1">{ item.icon }</div>
-                          <div className="vip">{ item.vip }</div>
-                      </div>
-                  </div>
-                  <div className="state-contain">
-                    <div className="state">{ item.state }</div> 
-                  </div>
+            <div className="video-list">
+              <div className="list-detail">
+                <img className="img-2" alt="" src={ item.img }/>
+                <div className="icon">
+                    <div className="add-icon">
+                        <div className="icon-1">{ item.icon }</div>
+                    </div>
                 </div>
-              <div className="list-title">{ item.title }</div>
-              <div className="list-titlea">{ item.text }</div>
+                <div className="state-contain">
+                  <div className="state">更新至{ item.number }集</div> 
+                </div>
+              </div>
+            <div className="list-title">{ item.name }</div>
+            <div className="list-titlea">{ item.summary }</div>
           </div>
         </div>
+        </a>   
       </div>
     ) 
 

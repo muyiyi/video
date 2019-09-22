@@ -16,10 +16,11 @@ import App from './components/app/app';
 import './index.css'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import Vip from './components/vip/vip';
 // 路由器
 ReactDOM.render(<Router>
                 <Route path="/" exact component={ App }></Route>
+                <Route path="/vip/" component={ Vip }></Route>
                 </Router>, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change

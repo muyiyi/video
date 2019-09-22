@@ -26,20 +26,20 @@ class SwiperDetail extends React.Component {
     let item = this.props.data;
     return (
       <div className="swiper-detail">
-        <img className="img-1" alt="" src={ item.imgsrc }/>
+        <a href={ item.url }>
+          <img className="img-1" alt="" src={ item.img }/>
         <div className="icon">
-            <div className="add-icon">
-                <div className="icon-1">{ item.icon }</div>
-                <div className="vip">{ item.vip }</div>
-            </div>
+          <div className="add-icon">
+            <div className="icon-1">{ item.icon }</div>
+          </div>
         </div>
         <div className="state-contain">
-            <div className="state">{ item.state }</div> 
+          <div className="state">更新至{ item.number }集</div> 
         </div>
         <div className="text-contain">
-            <div className="img-text">{ item.title }</div>
-            <div className="img-num">{ item.num }</div>
+          <div className="img-text">{ item.summary }</div>
         </div>
+        </a>
       </div>
     )
   }

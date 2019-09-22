@@ -7,6 +7,8 @@
 import React from 'react'
 import './app-nav.less'
 import classnames from 'classnames'
+import { Link } from 'react-router-dom/cjs/react-router-dom';
+import Vip from '../vip/vip';
 
 
 class AppNav extends React.Component {
@@ -22,12 +24,11 @@ class AppNav extends React.Component {
     }
   }
 
-  Tabchange = (item, index) => {
-    this.props.listchange()
+  Tabchange = (type, index) => {
+    this.props.listchange(type)
     this.setState({
       chooseindex: index
     })
-    console.log(item)
   }
 
   /**
@@ -36,19 +37,29 @@ class AppNav extends React.Component {
   render() {
     const menu = this.props.nav
     let menulie = menu.map((item, index) => {
-      return (
-        <li key={ index } onClick={ this.Tabchange.bind(this, item, index) }
+      if (index === 2) {
+        return (
+          <li className="vip" key={ index }>
+            <Link to={ {pathname: "/vip/"} }>VIP</Link>
+          </li>
+        )
+      } else {
+        return (
+        <li key={ index } onClick={ this.Tabchange.bind(this, item.type, index) }
         className={ classnames({'selected': this.state.chooseindex === index}) }>
-        { item }
+        { item.name }
         </li>
-      )
+        )
+      }
+      
     })
 
+    
     return (
       <ul className="app-nav">
           { menulie }
       </ul>
-    )
+    )   
   }
 }
 
