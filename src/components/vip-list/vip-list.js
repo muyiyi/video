@@ -5,10 +5,10 @@
  */
 
 import React from 'react'
-import './abc.less'
+import './vip-list.less'
 
 
-class Abc extends React.Component {
+class VipList extends React.Component {
   /**
    * @desc 不用解释了吧，这是组件的构造函数
    * @param {*} props 
@@ -45,4 +45,4 @@ class Abc extends React.Component {
 }
 
 
-export default Abc;
+export default VipList;
