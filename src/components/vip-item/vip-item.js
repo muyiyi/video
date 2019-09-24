@@ -27,6 +27,7 @@ class VipItem extends React.Component {
   render() {
     const itemmenu = this.props.data
     let itemlie = itemmenu.map((item, index) => {
+      console.log(item)
       return (
         <div key={ index } className="item-box">
           <VipList data={ item }></VipList>

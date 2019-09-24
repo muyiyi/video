@@ -29,14 +29,16 @@ class VipList extends React.Component {
     return (
       <ul className="item-list">
         <li className="item-contain">
-          <div className="img">
-            <img src={ item.img }/>
-          </div>
+          <a href={ item.url }>
+            <div className="img">
+              <img src={ item.imgv }/>
+            </div>
+          </a>
           <div className="title-box">
-            <div className="item-title">{ item.title }</div>
+            <div className="item-title">{ item.name }</div>
           </div>
           <div className="vip">
-            <img src={ item.icon } className="icon"/>
+            <img/>
           </div>
         </li>
       </ul>

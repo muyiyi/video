@@ -14,6 +14,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import App from '@pages/app/app'
 import RoutePage from '@pages/route-page/route-page'
+import DetailSearch from './components/detail-search/detail-search'
 
 class Routes extends React.Component {
   render() {
@@ -21,6 +22,7 @@ class Routes extends React.Component {
       <Router>
         <Route path="/" exact component={ App }></Route>
         <Route path="/route-page" component={ RoutePage }></Route>
+        <Route path="/search" component={ DetailSearch }></Route>
       </Router>
     )
   }

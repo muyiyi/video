@@ -6,6 +6,7 @@
 
 import React from 'react'
 import './app-head.less'
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 
 class AppHead extends React.Component {
@@ -28,7 +29,9 @@ class AppHead extends React.Component {
             <div className="head-logo"></div>
             <div className="search-contain">
                 <span className="search-text">陆战之王</span>
-                <div className="search-logo"></div>
+                <Link to={ {pathname: "/search/"} }>
+                  <div className="search-logo"></div>
+                </Link>
             </div>
         </div>
     )

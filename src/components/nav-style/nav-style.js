@@ -6,6 +6,7 @@
 
 import React from 'react'
 import './nav-style.less'
+import classnames from 'classnames'
 
 
 class NavStyle extends React.Component {
@@ -16,9 +17,16 @@ class NavStyle extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {}
+    this.state = {
+      chooseindex: 0
+    }
   }
 
+  change = (index) => {
+    this.setState({
+      chooseindex: index
+    })
+  }
 
   /**
    * @desc 不用解释了吧，render函数
@@ -27,7 +35,8 @@ class NavStyle extends React.Component {
     const list = this.props.data
     let liststyle = list.map((item, index) => {
       return(
-        <li key={ index } className="item">{ item }</li>
+        <li key={ index } className="item" onClick={ this.change.bind(this, index)} 
+        className={ classnames({'selected': this.state.chooseindex === index})}>{ item }</li>
       )
     })
     
@@ -36,7 +45,7 @@ class NavStyle extends React.Component {
         <div className="search-nav">
           <div className="show-border">
             <ul className="show-list">
-              { liststyle }
+                { liststyle }
             </ul>
           </div>
         </div>

@@ -14,13 +14,21 @@ import axios from 'axios'
 import { apiBaseUrl } from './http-config'
 
 const urlMap = {
-  getList: apiBaseUrl + '/2h4g/getvideo/'
+  getList: apiBaseUrl + '/2h4g/getvideo/',
+  getvip: apiBaseUrl + '/2h4g/getvideo/list_vip',
 }
 
 const HttpClient = {
   getList: (options) => {
     axios
       .get(urlMap.getList, {params: options.params})
+        .then(function (response) { options.callback && options.callback(response); })
+        .catch(function (error) { options.failcallback && options.failcallback(error); })
+        .then(function () { }) 
+  },
+  getvip: (options) => {
+    axios
+      .get(urlMap.getvip, {params: options.params})
         .then(function (response) { options.callback && options.callback(response); })
         .catch(function (error) { options.failcallback && options.failcallback(error); })
         .then(function () { }) 
