@@ -36,9 +36,9 @@ class AppStyle extends React.Component {
 
     return (
       <div className="video-contain">
-        <div className="video-name">{ data.title }</div>
-        <div className={ classnames('box', {'boxa': data.type === 4 }, {'boxb': data.type === 2}, )} >{ video }</div>
-        <div className={ classnames('list-btm', {'list-btma': data.type === 2 } )}>
+        <div className={ classnames({'videomenu': data.type === 2 }, {'videomenua': data.type === 3 }, {'videomenua': data.type === 5 }  )} >{ data.title }</div>
+        <div className={ classnames('box', {'boxa': data.type === 4 }, {'boxb': data.type === 2}, {'boxb': data.type === 3}, {'boxc': data.type === 5}  )} >{ video }</div>
+        <div className={ classnames('list-btm', {'list-btma': data.type === 2 }, {'list-btma': data.type === 3 } )}>
           <img className="img-10" alt="" src={ data.imgsrc }/>
           <div className="list-change">{ data.btm }</div>
         </div> 

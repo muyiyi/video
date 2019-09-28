@@ -8,6 +8,7 @@ import React from 'react'
 import './detail-search.less'
 import Nav from '../nav/nav';
 import DownMenu from '../down-menu/down-menu';
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 
 class DetailSearch extends React.Component {
@@ -30,17 +31,19 @@ class DetailSearch extends React.Component {
       <div className="detail-search">
         <div className="head">
           <div className="icon">
-            <img className="img"/>
+            <span className="img"></span>
           </div>
           <div className="box">
             <div className="text-box">
               <span className="text">在远方</span>
               <div className="icon-1">
-                <img className="img-1"/>
+                <span className="img-1"></span>
               </div>
             </div>
           </div> 
-          <div className="return">返回</div>
+          <Link to={ {pathname: "/"} }>
+            <div className="return">返回</div>
+          </Link>
         </div>
         <Nav></Nav>
         <DownMenu></DownMenu>

@@ -17,12 +17,14 @@ import './index.css'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Vip from './components/vip/vip';
-import DetailSearch from './components/detail-search/detail-search'
+import DetailSearch from './components/detail-search/detail-search';
+import Play from './components/play/play';
 // 路由器
 ReactDOM.render(<Router>
                 <Route path="/" exact component={ App }></Route>
                 <Route path="/vip/" component={ Vip }></Route>
                 <Route path="/search" component={ DetailSearch }></Route>
+                <Route path="/detail" component={ Play }></Route>
                 </Router>, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change

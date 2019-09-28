@@ -6,6 +6,7 @@
 
 import React from 'react'
 import './vip-list.less'
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 
 class VipList extends React.Component {
@@ -29,11 +30,13 @@ class VipList extends React.Component {
     return (
       <ul className="item-list">
         <li className="item-contain">
+        <Link to={ {pathname: "/detail/"} }>
           <a href={ item.url }>
             <div className="img">
               <img src={ item.imgv }/>
             </div>
           </a>
+        </Link>
           <div className="title-box">
             <div className="item-title">{ item.name }</div>
           </div>

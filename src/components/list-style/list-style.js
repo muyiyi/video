@@ -7,6 +7,8 @@
 import React from 'react'
 import './list-style.less'
 import 'swiper/dist/css/swiper.min.css'
+import { Link } from 'react-router-dom/cjs/react-router-dom';
+import classnames from 'classnames'
 
 
 class ListStyle extends React.Component {
@@ -25,9 +27,11 @@ class ListStyle extends React.Component {
    */
   render() {
     let item = this.props.item
+    console.log(item)
     return (
       <div className="list-style">
-        <a href={ item.url }>
+        <Link to={ {pathname: "/detail", query: { url: item.name }} }>
+          <a href={ item.url }>
           <div className="list-box">
             <div className="video-list">
               <div className="list-detail">
@@ -37,18 +41,18 @@ class ListStyle extends React.Component {
                         <div className="icon-1">{ item.icon }</div>
                     </div>
                 </div>
-                <div className="state-contain">
-                  <div className="state">更新至{ item.number }集</div> 
+                <div className="state-contain" >
+                  <div className="state">{ item.number }</div> 
                 </div>
               </div>
-            <div className="list-title">{ item.name }</div>
-            <div className="list-titlea">{ item.summary }</div>
+              <div className="list-title">{ item.name }</div>
+              <div className="list-titlea">{ item.summary }</div>
+            </div>
           </div>
-        </div>
-        </a>   
+          </a>   
+        </Link>
       </div>
     ) 
-
   }
 }
 

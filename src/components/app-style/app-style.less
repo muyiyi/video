@@ -3,6 +3,18 @@
     margin-bottom: 10px;
     margin-top: 18px;
 
+    .videomenua {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .videomenu {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 700;
+    }
+
     .video-name {
         font-size: 18px;
         line-height: 22px;
@@ -80,6 +92,39 @@
     }
     
     .boxb {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+
+        .transmit {
+            width: 48%;
+            position: relative;
+            margin: 0 1px 0 5px;
+
+            .list-style {
+                .list-box {
+                    .video-list {
+                        .list-titlea {
+                            margin-top: 4px;
+                            font-size: 12px;
+                            line-height: 18px;
+                            color: #a2a2b6;
+                            margin-left: -6px;
+                            text-overflow : ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .boxb::-webkit-scrollbar {
+        display: none;
+    }
+
+    .boxc {
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
